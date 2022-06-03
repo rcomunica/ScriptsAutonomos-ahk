@@ -1,0 +1,13 @@
+- Descargar AutoHotkey en https://www.autohotkey.com/download/ahk-install.exe
+
+- Ejecuta el script de tu conveniencia
+
+-- MinecraftAutoClick.ahk --
+
+Keys:
+
+AutoClick: Boton lateral 1
+Rompe Y Escape: Boton lateral 2
+
+Nota: Rompe Y Escape solo funciona cuando la cama se rompe desde arriba y tiene lana en
+       en el 3 lugar

@@ -3,20 +3,25 @@ MsgBox 0, ComunicaScript, Se ha ejecutado Troll V1
 
 Spam()
 {
-	Loop, 500{
+	Loop, 999{
 		SendRaw, `El que lea esto es tombo`
-		Sleep, 100
+		Sleep, 10
 		Send, {Enter down}
 	}
 }
 
 Emoji()
 {
-    Loop, 10{
-        SendRaw, `😀😁😊🙄😏`
+    Loop, 500{ 
+        SendRaw, ``
         Sleep, 150
     }
 }
 
-Left::Spam()
+
+Left::
+KeyWait, Left
+Spam()
 Right::Emoji()
+
+Up::Emoji.ca
