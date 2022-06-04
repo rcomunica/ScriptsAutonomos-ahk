@@ -1,4 +1,4 @@
-MsgBox 0, ComunicaScript, Se ha ejecutado Minecraft AutoClick V1
+MsgBox 0, ComunicaScript, Se ha ejecutado Minecraft AutoClick V1.5
 
 
 romper()
@@ -8,15 +8,22 @@ romper()
 	Send, {LButton Up}
 }
 
-autoclick()
+autoclick(cancel=False)
 {
+	Send, {Ctrl down}
 	Loop 60{
 	Send, {LButton down}
 	Sleep, 10
 	Send, {LButton Up}
 	}
+	Send, {Ctrl up}
+
+	If (cancel == True){
+		Reload
+	}
 
 }
+
 RomperYEscape()
 {
 	Send, {LButton down}
@@ -30,10 +37,22 @@ RomperYEscape()
 	}
 	Sleep, 250
 	Send, {Space up}
-	
 
+}
+
+Intent()
+{
+	Reload
 }
 
 
 XButton1::autoclick()
 XButton2::RomperYEscape()
+
+r::autoclick()
+
+Control & r::autoclick()
+Control & XButton1::autoclick()
+Control & XButton2::RomperYEscape()
+
+<^+Esc::ExitApp
